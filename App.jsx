@@ -7,15 +7,8 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
-import Header from "./Header";
 import Page from "./Page";
-import UserProducts from "./UserProducts";
-import SignIn from "./SignIn";
-import SignUp from "./SignUp";
-import DisplayProducts from "./DisplayProducts";
-import DisplaySpecificProducts from "./displaySpecificProducts";
 import Item from "./Item";
-import AddProduct from "./AddProduct";
 import AddOptions from "./AddOptions";
 import AddElementPage from "./AddElementPage";
 
