@@ -1,0 +1,314 @@
+.home-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /*1 rem= 16px*/
+}
+
+.home-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.button-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-add {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-add:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-add:active {
+  background-color: #1e40af;
+}
+
+.btn-edit {
+  background-color: #ffffff;
+  color: #334155;
+  border-color: #cbd5e1;
+}
+
+.btn-edit:hover {
+  background-color: #f1f5f9;
+}
+
+.btn-edit:active {
+  background-color: #e2e8f0;
+}
+.add-options-page {
+    position: fixed;/*positions an element relative to the browser window (viewport) so it stays in the same place on the screen even when the page is scrolled*/
+    inset: 0;/*this is a shorthand for top:0, right: 0, bottom: 0, left: 0*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.add-options-card {
+  width: 100%;
+  max-width: 24rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+ 
+.add-options-question {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  text-align: center;
+}
+.discard-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ef4444;
+    background-color: #ffffff;
+    color: #ef4444;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.discard-button:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.discard-button:active {
+    background-color: #dc2626;
+}
+.option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+ 
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+ 
+.option-item:hover {
+  background-color: #f1f5f9;
+  border-color: #2563eb;
+}
+ 
+.option-item:active {
+  background-color: #e2e8f0;
+}
+ 
+.option-item svg {
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.hidden{
+  display:none;
+}
+.blur{
+  filter: blur(5px);
+}
+.add-element-page {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 24px;
+  font-family: system-ui, sans-serif;
+  color: #1f2937;
+}
+
+.add-element-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-element-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Fieldsets (sections) --- */
+.add-element-form fieldset {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.add-element-form legend {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0 6px;
+  color: #4f46e5;
+}
+
+/* --- Labels & inputs --- */
+.add-element-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 14px;
+}
+
+.add-element-form label:last-child {
+  margin-bottom: 0;
+}
+
+.add-element-form input[type="text"],
+.add-element-form input[type="number"],
+.add-element-form select {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.add-element-form input[type="text"]:focus,
+.add-element-form input[type="number"]:focus,
+.add-element-form select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Color inputs — override default browser box */
+.add-element-form input[type="color"] {
+  width: 100%;
+  height: 36px;
+  padding: 2px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  background: none;
+}
+
+/* --- Live preview section --- */
+.preview-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border: 1px dashed #d1d5db;
+  border-radius: 10px;
+  background: #f9fafb;
+}
+
+.preview-section p {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* --- Action buttons --- */
+.add-element-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.add-element-actions button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.add-element-actions button:active {
+  transform: scale(0.97);
+}
+
+/* Submit / Create button */
+.add-element-actions button[type="submit"] {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.add-element-actions button[type="submit"]:hover {
+  background: #4338ca;
+}
+
+.add-element-actions button[type="button"] {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.add-element-actions button[type="button"]:hover {
+  background: #e5e7eb;
+}
+.cameraButton {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .uploadButton {
+    padding: 12px;
+    background-color: #2196F3;  
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .imagePreview {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+  }

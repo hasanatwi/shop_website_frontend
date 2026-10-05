@@ -3,6 +3,7 @@ export function showPasswordError(
   setPassword,
   setPasswordErrorMessage
 ) {
+  console.log("The showPasswordError function was entered");
   const strongPasswordRegex =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   const flag = strongPasswordRegex.test(password);
@@ -24,6 +25,7 @@ export function showPasswordError(
       errorMessage +=
         "Password must contain at least one special character (@, $, !, %, *, ?, &). ";
     setPasswordErrorMessage(errorMessage);
+    console.log("The password is in wrong format");
     return false;
   }
 }
