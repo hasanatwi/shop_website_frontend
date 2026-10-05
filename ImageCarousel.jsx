@@ -47,7 +47,7 @@ export default function ImageCarousel({ itemId, images, setImages, properties, s
    useEffect(() => {
   const fetchDescription = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/getItemDescription?component_id=${itemId}`, {
+      const res = await fetch(`https://shop-website-backend-irx9.onrender.com/getItemDescription?component_id=${itemId}`, {
         credentials: "include",
       });
 
@@ -69,7 +69,7 @@ export default function ImageCarousel({ itemId, images, setImages, properties, s
 
   const handleSaveDescription = async () => {
   try {
-    const res = await fetch("http://localhost:3000/updateItemDescription", {
+    const res = await fetch("https://shop-website-backend-irx9.onrender.com/updateItemDescription", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -145,7 +145,7 @@ export default function ImageCarousel({ itemId, images, setImages, properties, s
   };
 
   try {
-    const res = await fetch("http://localhost:3000/deleteItemImageOption", {
+    const res = await fetch("https://shop-website-backend-irx9.onrender.com/deleteItemImageOption", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -270,7 +270,7 @@ export default function ImageCarousel({ itemId, images, setImages, properties, s
   };
 
   try {
-    const res = await fetch("http://localhost:3000/updateItemImageProperty", {
+    const res = await fetch("https://shop-website-backend-irx9.onrender.com/updateItemImageProperty", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
@@ -314,7 +314,7 @@ export default function ImageCarousel({ itemId, images, setImages, properties, s
     const handleDeleteImage = async (deleteIndex) => {
     try {
       console.log("The handleDeleteImage is entered");
-      const res = await fetch("http://localhost:3000/deleteItemImage", {
+      const res = await fetch("https://shop-website-backend-irx9.onrender.com/deleteItemImage", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
