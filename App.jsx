@@ -45,7 +45,7 @@ const getGlobalZIndex=async(e)=>{
       console.log("The getGlobalZIndex started");
     try{
       const response=await fetch(
-        'http://localhost:3000/getGlobalZIndex',
+        'https://shop-website-backend-irx9.onrender.com/getGlobalZIndex',
         {
           method: "GET",
           credentials: "include",
@@ -71,7 +71,7 @@ const getGlobalZIndex=async(e)=>{
       console.log("The innerGlobalZIndex that I want to put in the DB is: "+innerGlobalZIndex);
     try{
       const response=await fetch(
-        'http://localhost:3000/updateGlobalZIndex',
+        'https://shop-website-backend-irx9.onrender.com/updateGlobalZIndex',
         {
           method: "POST",
           headers: {"Content-Type":"application/json"},
@@ -97,7 +97,7 @@ useEffect(()=>{
 const getPages=async()=>{
   try{
 const response=await fetch(
-    'http://localhost:3000/getPages',
+    'https://shop-website-backend-irx9.onrender.com/getPages',
     {
       method: "GET",
       headers: {"Content-Type":"application/json"},
