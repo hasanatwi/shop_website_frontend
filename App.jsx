@@ -154,10 +154,6 @@ return (
         />
       ))}
       <Route
-        path="/cart"
-        element={ <UserProducts admin={admin} email={email} nameOfTheUser={nameOfTheUser}/>}
-      />
-      <Route
         path="/header"
         element={ <Page page_id={2} nameOfTheUser={nameOfTheUser} setNameOfTheUser={setNameOfTheUser} setIsAdmin={setIsAdmin} isAdmin={isAdmin}/>}//here I am sending the value of nameOfTheUser but it's not printing in the Page when page_id=2
       />
@@ -177,26 +173,6 @@ return (
         </KeyedByUrl>
       }
     />
-      <Route
-        path="/sign_up"
-        element= { <SignUp isValid2={isValid} setIsValid2={setIsValid} setNameOfTheUser2={setNameOfTheUser} setEmail2={setEmail}/>}
-      />
-      <Route
-        path="/sign_in"
-        element= { <SignIn isValid2={isValid} setIsValid2={setIsValid} setNameOfTheUser2={setNameOfTheUser} setEmail2={setEmail}/>}
-      />
-      <Route
-        path="/shop"
-        element={ <DisplayProducts admin={admin} isValid={isValid} nameOfTheUser={nameOfTheUser} email={email}/>}
-      />
-      <Route
-        path="/displaySpecificProducts/:title"
-        element={ <DisplaySpecificProducts admin={admin} isValid={isValid} nameOfTheUser={nameOfTheUser} email={email}  />}
-      />
-      <Route
-        path="/item/:name_of_the_category/:title"
-        element={ <Item admin={admin} isValid={isValid} nameOfTheUser={nameOfTheUser} email={email}/>}
-      />
       <Route  
         path="/addOptions"
         element= { <AddOptions addButtonPressed={addButtonPressed} setAddButtonPressed={setAddButtonPressed}/>}
