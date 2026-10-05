@@ -28,7 +28,7 @@
     const updateIsTheLowest = async (value) => {
   try {
     const response = await fetch(
-      'http://localhost:3000/updateIsTheLowest',
+      'https://shop-website-backend-irx9.onrender.com/updateIsTheLowest',
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -86,7 +86,7 @@
     const addCategoryToDivision=async(e)=>{
       try{
         const response=await fetch(
-          'http://localhost:3000/addCategoryToDivision',
+          'https://shop-website-backend-irx9.onrender.com/addCategoryToDivision',
           {
             method: "POST",
             headers: {"Content-Type":"application/json"},
@@ -103,7 +103,7 @@
       console.log("The handleDelete was entered");
       try{
         const response=await fetch(
-          'http://localhost:3000/deleteComponent',
+          'https://shop-website-backend-irx9.onrender.com/deleteComponent',
           {
             method: "DELETE",
             headers: {"Content-Type":"application/json"},
@@ -127,7 +127,7 @@
         try
         {
           const response=await fetch(
-          'http://localhost:3000/updateComponent',
+          'https://shop-website-backend-irx9.onrender.com/updateComponent',
           {
             method: "POST",
             headers: {"Content-Type":"application/json"},
@@ -232,7 +232,7 @@
       console.log("The function getInnerComponents was entered");
     try {
       const response = await fetch(
-        `http://localhost:3000/getInnerComponents?component_id=${component_id}`,
+        `https://shop-website-backend-irx9.onrender.com/getInnerComponents?component_id=${component_id}`,
         { method: "GET" }
       );
       if(response.ok){
