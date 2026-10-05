@@ -8,7 +8,6 @@ import {
   useLocation,
 } from "react-router-dom";
 import Page from "./Page";
-import Item from "./Item";
 import AddOptions from "./AddOptions";
 import AddElementPage from "./AddElementPage";
 
