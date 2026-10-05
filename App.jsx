@@ -132,10 +132,6 @@ return (
 <Router>
   <div>
     <Routes>
-      <Route
-        path="/addToCart"
-        element={ <AddProduct />}
-      />
         {pages.map((page) => (
         <Route
           key={page.page_id}
