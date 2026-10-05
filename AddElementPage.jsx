@@ -12,7 +12,7 @@ useEffect(() => {
       const getPages= async()=>{
         try{
         const response=await fetch(
-          'http://localhost:3000/getPages',
+          'https://shop-website-backend-irx9.onrender.com/getPages',
           {
             method: "GET",
             headers: {"Content-Type":"application/json"},
@@ -99,7 +99,7 @@ export default function AddElementPage({page_name, page_id, setComponentSpecs, s
   const getLatestComponentID = async () => {
     console.log("The getLatestComponentID was entered");
       try {
-        const response = await fetch('http://localhost:3000/getLatestComponentID', {
+        const response = await fetch('https://shop-website-backend-irx9.onrender.com/getLatestComponentID', {
           method: "GET",
           credentials: "include",
         });
@@ -247,7 +247,7 @@ const updateComponent=async(e)=>{
         console.log(pageToNavigateTo);
         try{
         const response=await fetch(
-          'http://localhost:3000/updateComponent',
+          'https://shop-website-backend-irx9.onrender.com/updateComponent',
           {
             method: "POST",
             headers: {"Content-Type":"application/json"},
@@ -262,7 +262,7 @@ const updateComponent=async(e)=>{
       let itemExists=false;
       try{
         const response1=await fetch(
-          `http://localhost:3000/checkComponentID?componentID=${componentID}`,
+          `https://shop-website-backend-irx9.onrender.com/checkComponentID?componentID=${componentID}`,
           {
             method: "GET",
             credentials: "include",
@@ -283,7 +283,7 @@ const updateComponent=async(e)=>{
         console.log("We are about to store the item where it doesn't exist previously in the database");  
         try{
           const response2=await fetch(
-            `http://localhost:3000/createItem`,
+            `https://shop-website-backend-irx9.onrender.com/createItem`,
             {
               method: "POST",
               headers: {"Content-Type":"application/json"},
@@ -319,7 +319,7 @@ const updateComponent=async(e)=>{
 
     try {
       const response = await fetch(
-        'http://localhost:3000/updateImageURL',
+        'https://shop-website-backend-irx9.onrender.com/updateImageURL',
         {
           method: "POST",
           credentials: "include",
@@ -359,7 +359,7 @@ const updateComponent=async(e)=>{
     try {
       console.log("The store component was entered");
       const response= await fetch(
-        'http://localhost:3000/storeComponent',
+        'https://shop-website-backend-irx9.onrender.com/storeComponent',
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -375,7 +375,7 @@ const updateComponent=async(e)=>{
       console.log("We are starting the process that happens when the buttonFunctionality is navigateToItemPage");
       /*try{
         const response1=await fetch(
-          `http://localhost:3000/checkComponentID?componentID=${componentID}`,
+          `https://shop-website-backend-irx9.onrender.com/checkComponentID?componentID=${componentID}`,
           {
             method: "GET",
             credentials: "include",
@@ -398,7 +398,7 @@ const updateComponent=async(e)=>{
         console.log("JUST BEFORE  starting the createItem process, The value of the latestComponentID is: "+(latestComponentID+1));
         try{
           const response2=await fetch(
-            `http://localhost:3000/createItem`,
+            `https://shop-website-backend-irx9.onrender.com/createItem`,
             {
               method: "POST",
               headers: {"Content-Type":"application/json"},
