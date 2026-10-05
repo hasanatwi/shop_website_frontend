@@ -73,7 +73,7 @@
             return;
           }
           try {
-            const response = await fetch("http://localhost:3000/signUp", {
+            const response = await fetch("https://shop-website-backend-irx9.onrender.com/signUp", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               credentials: "include", // needed so the session cookie from req.login is saved
@@ -111,7 +111,7 @@
       const handleLogout = async () => {
       console.log("The const handleLogout was entered");
       try {
-        const response = await fetch(`http://localhost:3000/logout`, {
+        const response = await fetch(`https://shop-website-backend-irx9.onrender.com/logout`, {
           method: "GET",
           credentials: "include", // required so the browser sends and clears the session cookie
         });
@@ -170,7 +170,7 @@
         console.log(signInPassword); 
       try{
         console.log("This part is being entered inside the handleSignIn5");
-        const response=await fetch(`http://localhost:3000/login`,
+        const response=await fetch(`https://shop-website-backend-irx9.onrender.com/login`,
           {
             method: "POST",
             headers: {"Content-Type":"application/json"},
@@ -204,7 +204,7 @@
       const getItemImages = async (itemComponentID) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/getItemImages?component_id=${itemComponentID}`,
+        `https://shop-website-backend-irx9.onrender.com/getItemImages?component_id=${itemComponentID}`,
         {
           method: "GET",
           credentials: "include",
@@ -238,7 +238,7 @@
       formData.append("image", itemImageFile);
       formData.append("itemComponentID", itemComponentID);
 
-      const response = await fetch("http://localhost:3000/addItemImage", {
+      const response = await fetch("https://shop-website-backend-irx9.onrender.com/addItemImage", {
         method: "POST",
         credentials: "include",
         body: formData,
@@ -287,7 +287,7 @@
       const handleDeleteProperty = async (propertyName, itemComponentID) => {
         
         try {
-          const response = await fetch(`http://localhost:3000/deleteProperty`, {
+          const response = await fetch(`https://shop-website-backend-irx9.onrender.com/deleteProperty`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
             credentials: "include",
@@ -335,7 +335,7 @@
     if (!optToDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/deleteOption`, {
+      const response = await fetch(`https://shop-website-backend-irx9.onrender.com/deleteOption`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -409,7 +409,7 @@
 
       try {
         const response = await fetch(
-          'http://localhost:3000/addOption',
+          'https://shop-website-backend-irx9.onrender.com/addOption',
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -443,7 +443,7 @@
       const getProperties = async (itemComponentID) => {
       try {
         const response = await fetch(
-          `http://localhost:3000/getProperties?component_id=${itemComponentID}`,
+          `https://shop-website-backend-irx9.onrender.com/getProperties?component_id=${itemComponentID}`,
           {
             method: "GET",
             credentials: "include",
@@ -481,7 +481,7 @@
         console.log("We are starting the fetchAndSetProperties: ");
       try {
         const response = await fetch(
-          `http://localhost:3000/setProperties/${typeWeAreDealingWith}/${itemComponentID}`,
+          `https://shop-website-backend-irx9.onrender.com/setProperties/${typeWeAreDealingWith}/${itemComponentID}`,
           {
             method: "GET",
             credentials: "include",
@@ -503,7 +503,7 @@
       const updateTypeWeAreDealingWith = async (itemComponentID) => {
     try {
       const response = await fetch(
-        'http://localhost:3000/updateTypeWeAreDealingWith',
+        'https://shop-website-backend-irx9.onrender.com/updateTypeWeAreDealingWith',
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -532,7 +532,7 @@
       const setTypeID=async(typeName)=>{
         try{
           const response=await fetch(
-            'http://localhost:3000/setTypeID',
+            'https://shop-website-backend-irx9.onrender.com/setTypeID',
             {
               method: "POST",
               headers: {"Content-Type":"application/json"},
@@ -561,7 +561,7 @@
         const getItemTypes=async(e)=>{
         try{
           const response=await fetch(
-            'http://localhost:3000/getItemTypes',
+            'https://shop-website-backend-irx9.onrender.com/getItemTypes',
             {
               method: "GET",
               credentials: "include",
@@ -594,7 +594,7 @@
         console.log("handleItemType was entered");
         try{
           const response=await fetch(
-            'http://localhost:3000/addItemType',
+            'https://shop-website-backend-irx9.onrender.com/addItemType',
             {
               method: "POST",
               headers: {"Content-Type": "application/json"},
@@ -624,7 +624,7 @@
           e.preventDefault();
           try{
               const response=await fetch(
-                "http://localhost:3000/addProperty",
+                "https://shop-website-backend-irx9.onrender.com/addProperty",
                 {
                   method: "POST",
                   headers: {"Content-Type":"application/json"},
@@ -693,7 +693,7 @@
             formData.append("backgroundIsImage", true);
             formData.append("page_id", page_id);
             const response=await fetch(
-              'http://localhost:3000/updateBackgroundImage',
+              'https://shop-website-backend-irx9.onrender.com/updateBackgroundImage',
               {
                 method: "POST",
                 credentials: "include",
@@ -731,7 +731,7 @@
         try{
           console.log("The get background was entered");
           const response=await fetch(
-            `http://localhost:3000/getBackground?page_id=${page_id}`,
+            `https://shop-website-backend-irx9.onrender.com/getBackground?page_id=${page_id}`,
             {
               method: "GET",
               credentials:"include",
@@ -762,7 +762,7 @@
           e.preventDefault();
           try{
             const response=await fetch(
-              'http://localhost:3000/addPage',
+              'https://shop-website-backend-irx9.onrender.com/addPage',
               {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
@@ -783,7 +783,7 @@
         try{
           console.log("The new color is: "+color);  
           const response=await fetch(
-            'http://localhost:3000/updateBackground',
+            'https://shop-website-backend-irx9.onrender.com/updateBackground',
             {
               method: "POST",
               headers: {"Content-Type": "application/json"},
@@ -809,7 +809,7 @@
           const getComponents=async()=>{
           try{
             const response=await fetch(
-              'http://localhost:3000/getComponents',
+              'https://shop-website-backend-irx9.onrender.com/getComponents',
               {
                 method:"POST",
                 headers: {"Content-Type":"application/json"},
